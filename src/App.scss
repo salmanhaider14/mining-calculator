@@ -1,0 +1,191 @@
+body {
+  overflow-x: hidden;
+}
+
+.App {
+  min-height: 100vh;
+  width: 100%;
+  background-color: rgb(186, 215, 233, 0.5);
+
+  .options {
+    margin-top: 2rem;
+    position: absolute;
+    margin-left: 30%;
+
+    ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+      border: none;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+
+      li {
+        button {
+          background-color: whitesmoke;
+          border: none;
+          color: black;
+          padding: 13px;
+          border-radius: 5px;
+          box-shadow: 3px 5px 16px rgb(183, 62, 62, 0.5);
+          transition: all 0.2s;
+          cursor: pointer;
+
+          &:hover {
+            transform: translateY(-5px);
+          }
+        }
+      }
+    }
+  }
+
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    .calculator {
+      display: flex;
+      flex-direction: column;
+      width: 250px;
+      height: max-content;
+      background-color: whitesmoke;
+      gap: 10px;
+      padding: 1rem;
+      box-shadow: 3px 5px 16px rgba(0, 0, 0, 0.5);
+      border-radius: 5px;
+      margin-top: 16rem;
+
+      img {
+        margin: auto;
+      }
+
+      .rate {
+        text-align: center;
+        color: #6b728e;
+        font-weight: bold;
+      }
+
+      input {
+        height: 30px;
+        border: 0.1px solid grey;
+        border-radius: 5px;
+        padding: 7px;
+        &:focus {
+          border: none;
+          outline: 1.5px solid orangered;
+        }
+      }
+    }
+
+    .stats {
+      width: 550px;
+      height: max-content;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      font-size: 14px;
+      position: relative;
+      margin-top: 10rem;
+
+      .day {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 10px;
+        width: 100%;
+
+        .profitmonth {
+          background-color: rgb(183, 62, 62, 0.9);
+          width: 35%;
+          height: 70px;
+          color: white;
+          padding: 1rem;
+          text-align: end;
+          border-radius: 8px;
+          box-shadow: 3px 5px 16px rgb(183, 62, 62, 1);
+          line-height: 8px;
+
+          p {
+            background-color: white;
+            color: #b73e3e;
+            width: max-content;
+            padding: 10px;
+            text-align: end;
+            border-radius: 16px;
+          }
+        }
+
+        .profit {
+          background-color: #b73e3e;
+          width: 35%;
+          height: 70px;
+          color: white;
+          padding: 1rem;
+          text-align: end;
+          border-radius: 8px;
+          box-shadow: 3px 5px 16px rgba(0, 0, 0, 0.3);
+          line-height: 8px;
+          position: relative;
+
+          h3 {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            background-color: white;
+            color: #b73e3e;
+            padding: 7px;
+            border-radius: 10px;
+            font-size: 12px;
+          }
+        }
+        .mined {
+          background-color: whitesmoke;
+          width: 35%;
+          height: 70px;
+          text-align: end;
+          padding: 7px;
+          border-radius: 8px;
+          box-shadow: 3px 5px 16px rgba(0, 0, 0, 0.3);
+          line-height: 8px;
+          color: #eb455f;
+        }
+        .power {
+          background-color: whitesmoke;
+          width: 35%;
+          height: 70px;
+          text-align: end;
+          padding: 7px;
+          border-radius: 8px;
+          box-shadow: 3px 5px 16px rgba(0, 0, 0, 0.3);
+          line-height: 8px;
+          color: #eb455f;
+        }
+      }
+    }
+  }
+}
+
+@media all and (max-width: 900px) {
+  .App {
+    .options {
+      margin-left: 0%;
+    }
+  }
+  .day {
+    flex-direction: column;
+
+    .profit {
+      width: 60%;
+    }
+    .mined {
+      width: 60%;
+    }
+    .power {
+      width: 60%;
+    }
+  }
+}
