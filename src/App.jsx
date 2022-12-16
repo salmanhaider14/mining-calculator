@@ -92,6 +92,7 @@ function App() {
                 setIsDash(false);
                 setIsltc(false);
                 setIsDoge(false);
+                setIsKadena(false);
                 setHourlyValue(0.00000015);
                 setExchangeRate(17457.05);
                 setProfitDay(0);
@@ -117,6 +118,7 @@ function App() {
                 setIsDash(false);
                 setIsltc(false);
                 setIsDoge(false);
+                setIsKadena(false);
               }}
             >
               ETC{" "}
@@ -134,6 +136,7 @@ function App() {
                 setIsDash(false);
                 setIsltc(false);
                 setIsDoge(false);
+                setIsKadena(false);
                 setProfitDay(0);
                 setCostday(0);
                 setMinedday(0);
@@ -154,6 +157,7 @@ function App() {
                 setIsDash(false);
                 setIsltc(false);
                 setIsDoge(false);
+                setIsKadena(false);
                 setProfitDay(0);
                 setCostday(0);
                 setMinedday(0);
@@ -174,6 +178,7 @@ function App() {
                 setIsDash(true);
                 setIsDoge(false);
                 setIsltc(false);
+                setIsKadena(false);
                 setProfitDay(0);
                 setCostday(0);
                 setMinedday(0);
@@ -193,6 +198,7 @@ function App() {
                 setIszec(false);
                 setIsDash(false);
                 setIsDoge(false);
+                setIsKadena(false);
                 setIsltc(true);
                 setProfitDay(0);
                 setCostday(0);
@@ -213,6 +219,7 @@ function App() {
                 setIszec(false);
                 setIsDash(false);
                 setIsltc(false);
+                setIsKadena(false);
                 setIsDoge(true);
                 setProfitDay(0);
                 setCostday(0);
@@ -222,11 +229,11 @@ function App() {
               DOGE
             </button>
           </li>
-          {/* <li>
+          <li>
             <button
               onClick={() => {
                 setExchangeRate(0.997);
-                setHourlyValue(0.00076643);
+                setHourlyValue(0.0133675);
                 setIsbtc(false);
                 setIsetc(false);
                 setIsxmr(false);
@@ -242,7 +249,7 @@ function App() {
             >
               Kadena
             </button>
-          </li> */}
+          </li>
         </ul>
       </div>
 
@@ -269,7 +276,8 @@ function App() {
               (isZec && "1 ZEC = 45.93$") ||
               (isDash && "1 Dash = 46.79$") ||
               (isLtc && "1 LTC = 73.16$") ||
-              (isDoge && "1 DOGE = 0.082$")}{" "}
+              (isDoge && "1 DOGE = 0.082$") ||
+              (isKadena && "1 KDA = 0.997$ ")}
           </p>
           <label>Hashing Power</label>
           <input
@@ -281,7 +289,8 @@ function App() {
               (isZec && "0 Kh/s") ||
               (isDash && "0 Mh/s") ||
               (isLtc && "0 Mh/s") ||
-              (isDoge && "0 Mh/s")
+              (isDoge && "0 Mh/s") ||
+              (isKadena && "0 Th/s")
             }
             onChange={(e) => {
               setHashingpower(e.target.value);
