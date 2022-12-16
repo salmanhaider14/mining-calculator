@@ -176,7 +176,7 @@ body {
     }
   }
   .day {
-    flex-direction: column;
+    flex-wrap: wrap;
 
     .profit {
       width: 60%;

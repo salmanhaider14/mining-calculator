@@ -55,17 +55,17 @@ function App() {
   profitmonth = profitday * 30;
   profityear = profitday * 365;
 
-  useEffect(() => {
-    setPoolday((pool / 100) * profitday);
-  }, [pool]);
-  poolweek = poolday * 7;
-  poolMonth = poolday * 30;
-  poolYear = poolday * 365;
+  // useEffect(() => {
+  //   setPoolday((pool / 100) * profitday);
+  // }, [pool]);
+  // poolweek = poolday * 7;
+  // poolMonth = poolday * 30;
+  // poolYear = poolday * 365;
 
-  profitday -= poolday;
-  profitweek -= poolweek;
-  profitmonth -= poolMonth;
-  profityear -= poolYear;
+  // profitday -= poolday;
+  // profitweek -= poolweek;
+  // profitmonth -= poolMonth;
+  // profityear -= poolYear;
 
   const [isbtc, setIsbtc] = useState(true);
   const [isEtc, setIsetc] = useState(false);
@@ -73,6 +73,8 @@ function App() {
   const [isZec, setIszec] = useState(false);
   const [isDash, setIsDash] = useState(false);
   const [isLtc, setIsltc] = useState(false);
+  const [isDoge, setIsDoge] = useState(false);
+  const [isKadena, setIsKadena] = useState(false);
 
   console.log(hourlyvalue);
 
@@ -89,6 +91,7 @@ function App() {
                 setIszec(false);
                 setIsDash(false);
                 setIsltc(false);
+                setIsDoge(false);
                 setHourlyValue(0.00000015);
                 setExchangeRate(17457.05);
                 setProfitDay(0);
@@ -113,6 +116,7 @@ function App() {
                 setIszec(false);
                 setIsDash(false);
                 setIsltc(false);
+                setIsDoge(false);
               }}
             >
               ETC{" "}
@@ -129,6 +133,7 @@ function App() {
                 setIszec(false);
                 setIsDash(false);
                 setIsltc(false);
+                setIsDoge(false);
                 setProfitDay(0);
                 setCostday(0);
                 setMinedday(0);
@@ -148,6 +153,7 @@ function App() {
                 setIszec(true);
                 setIsDash(false);
                 setIsltc(false);
+                setIsDoge(false);
                 setProfitDay(0);
                 setCostday(0);
                 setMinedday(0);
@@ -166,6 +172,7 @@ function App() {
                 setIsxmr(false);
                 setIszec(false);
                 setIsDash(true);
+                setIsDoge(false);
                 setIsltc(false);
                 setProfitDay(0);
                 setCostday(0);
@@ -185,6 +192,7 @@ function App() {
                 setIsxmr(false);
                 setIszec(false);
                 setIsDash(false);
+                setIsDoge(false);
                 setIsltc(true);
                 setProfitDay(0);
                 setCostday(0);
@@ -194,6 +202,47 @@ function App() {
               LTC
             </button>
           </li>
+          <li>
+            <button
+              onClick={() => {
+                setExchangeRate(0.082);
+                setHourlyValue(0.00076643);
+                setIsbtc(false);
+                setIsetc(false);
+                setIsxmr(false);
+                setIszec(false);
+                setIsDash(false);
+                setIsltc(false);
+                setIsDoge(true);
+                setProfitDay(0);
+                setCostday(0);
+                setMinedday(0);
+              }}
+            >
+              DOGE
+            </button>
+          </li>
+          {/* <li>
+            <button
+              onClick={() => {
+                setExchangeRate(0.997);
+                setHourlyValue(0.00076643);
+                setIsbtc(false);
+                setIsetc(false);
+                setIsxmr(false);
+                setIszec(false);
+                setIsDash(false);
+                setIsltc(false);
+                setIsDoge(false);
+                setIsKadena(true);
+                setProfitDay(0);
+                setCostday(0);
+                setMinedday(0);
+              }}
+            >
+              Kadena
+            </button>
+          </li> */}
         </ul>
       </div>
 
@@ -206,7 +255,9 @@ function App() {
               (isXmr && "/xmr.png") ||
               (isZec && "/zec.png") ||
               (isDash && "/dash.png") ||
-              (isLtc && "/ltc.png")
+              (isLtc && "/ltc.png") ||
+              (isDoge && "/doge.png") ||
+              (isKadena && "/kadena.png")
             }
             alt=""
             width={80}
@@ -217,7 +268,8 @@ function App() {
               (isXmr && "1 XMR = 148.55$") ||
               (isZec && "1 ZEC = 45.93$") ||
               (isDash && "1 Dash = 46.79$") ||
-              (isLtc && "1 LTC = 73.16$")}
+              (isLtc && "1 LTC = 73.16$") ||
+              (isDoge && "1 DOGE = 0.082$")}{" "}
           </p>
           <label>Hashing Power</label>
           <input
@@ -228,7 +280,8 @@ function App() {
               (isXmr && "0 Kh/s") ||
               (isZec && "0 Kh/s") ||
               (isDash && "0 Mh/s") ||
-              (isLtc && "0 Mh/s")
+              (isLtc && "0 Mh/s") ||
+              (isDoge && "0 Mh/s")
             }
             onChange={(e) => {
               setHashingpower(e.target.value);
@@ -249,12 +302,12 @@ function App() {
             onChange={(e) => setHorsepower(e.target.value)}
           />
 
-          <label>Pool Fee (%)</label>
+          {/* <label>Pool Fee (%)</label>
           <input
             type={"text"}
             placeholder="0"
             onChange={(e) => setPool(e.target.value)}
-          />
+          /> */}
         </div>
 
         <div className="stats">
@@ -270,9 +323,9 @@ function App() {
               <div className="profit" style={{ backgroundColor: "green" }}>
                 <p>Profit per day</p>
                 <h2>${profitday.toFixed(4)}</h2>
-                <p style={{ fontSize: "14px" }}>
+                {/* <p style={{ fontSize: "14px" }}>
                   Pool Fee $ {poolday.toFixed(4)}
-                </p>
+                </p> */}
 
                 <h3>Day</h3>
               </div>
@@ -280,9 +333,9 @@ function App() {
               <div className="profit">
                 <p>Profit per day</p>
                 <h2>${profitday.toFixed(4)}</h2>
-                <p style={{ fontSize: "14px" }}>
+                {/* <p style={{ fontSize: "14px" }}>
                   Pool Fee $ {poolday.toFixed(4)}
-                </p>
+                </p> */}
 
                 <h3>Day</h3>
               </div>
@@ -309,18 +362,18 @@ function App() {
               <div className="profit" style={{ backgroundColor: "green" }}>
                 <p>Profit per week</p>
                 <h2>${profitweek.toFixed(4)}</h2>
-                <p style={{ fontSize: "14px" }}>
+                {/* <p style={{ fontSize: "14px" }}>
                   Pool Fee $ {poolweek.toFixed(4)}
-                </p>
+                </p> */}
                 <h3>Week</h3>
               </div>
             ) : (
               <div className="profit">
                 <p>Profit per week</p>
                 <h2>${profitweek.toFixed(4)}</h2>
-                <p style={{ fontSize: "14px" }}>
+                {/* <p style={{ fontSize: "14px" }}>
                   Pool Fee $ {poolweek.toFixed(4)}
-                </p>
+                </p> */}
                 <h3>Week</h3>
               </div>
             )}
@@ -347,18 +400,18 @@ function App() {
               <div className="profit" style={{ backgroundColor: "green" }}>
                 <p>Profit per month</p>
                 <h2>${profitmonth.toFixed(4)}</h2>
-                <p style={{ fontSize: "14px" }}>
+                {/* <p style={{ fontSize: "14px" }}>
                   Pool Fee $ {poolMonth.toFixed(4)}
-                </p>
+                </p> */}
                 <h3>Month</h3>
               </div>
             ) : (
               <div className="profit">
                 <p>Profit per month</p>
                 <h2>${profitmonth.toFixed(4)}</h2>
-                <p style={{ fontSize: "14px" }}>
+                {/* <p style={{ fontSize: "14px" }}>
                   Pool Fee $ {poolMonth.toFixed(4)}
-                </p>
+                </p> */}
                 <h3>Month</h3>
               </div>
             )}
@@ -385,18 +438,18 @@ function App() {
               <div className="profit" style={{ backgroundColor: "green" }}>
                 <p>Profit per year</p>
                 <h2>${profityear.toFixed(4)}</h2>
-                <p style={{ fontSize: "14px" }}>
+                {/* <p style={{ fontSize: "14px" }}>
                   Pool Fee $ {poolYear.toFixed(4)}
-                </p>
+                </p> */}
                 <h3>Year</h3>
               </div>
             ) : (
               <div className="profit">
                 <p>Profit per year</p>
                 <h2>${profityear.toFixed(4)}</h2>
-                <p style={{ fontSize: "14px" }}>
+                {/* <p style={{ fontSize: "14px" }}>
                   Pool Fee $ {poolYear.toFixed(4)}
-                </p>
+                </p> */}
                 <h3>Year</h3>
               </div>
             )}
