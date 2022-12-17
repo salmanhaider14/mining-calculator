@@ -357,7 +357,10 @@ function App() {
                   (isXmr && "XMR") ||
                   (isZec && "ZEC") ||
                   (isDash && "Dash") ||
-                  (isLtc && "Ł")}{" "}
+                  (isLtc && "Ł") ||
+                  (isDoge && "DOGE") ||
+                  (isKadena && "KDA ")}
+
                 {minedday.toFixed(6)}
               </h2>
             </div>
@@ -395,7 +398,9 @@ function App() {
                   (isXmr && "XMR") ||
                   (isZec && "ZEC") ||
                   (isDash && "Dash") ||
-                  (isLtc && "Ł")}{" "}
+                  (isLtc && "Ł") ||
+                  (isDoge && "DOGE") ||
+                  (isKadena && "KDA ")}{" "}
                 {minedperweek.toFixed(6)}
               </h2>
             </div>
@@ -433,7 +438,9 @@ function App() {
                   (isXmr && "XMR") ||
                   (isZec && "ZEC") ||
                   (isDash && "Dash") ||
-                  (isLtc && "Ł")}{" "}
+                  (isLtc && "Ł") ||
+                  (isDoge && "DOGE") ||
+                  (isKadena && "KDA ")}{" "}
                 {minedpermonth.toFixed(6)}
               </h2>
             </div>
@@ -471,7 +478,9 @@ function App() {
                   (isXmr && "XMR") ||
                   (isZec && "ZEC") ||
                   (isDash && "Dash") ||
-                  (isLtc && "Ł")}{" "}
+                  (isLtc && "Ł") ||
+                  (isDoge && "DOGE") ||
+                  (isKadena && "KDA ")}{" "}
                 {mindedperyear.toFixed(6)}
               </h2>
             </div>
