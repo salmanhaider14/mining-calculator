@@ -35,7 +35,7 @@ function App() {
 
   useEffect(() => {
     setMinedday(hourlyvalue * hashingpower * 24);
-  }, [hashingpower]);
+  }, [hashingpower, hourlyvalue]);
 
   minedperweek = minedday * 7;
   minedpermonth = minedday * 30;
@@ -97,9 +97,9 @@ function App() {
               setIsKadena(false);
               setHourlyValue(0.00000015);
               setExchangeRate(16670.97);
-              setProfitDay(0);
-              setCostday(0);
-              setMinedday(0);
+              // setProfitDay(0);
+              // setCostday(0);
+              // setMinedday(0);
             }}
           >
             <img src="/btc.png" alt="" width={30} />
@@ -111,9 +111,9 @@ function App() {
             onClick={() => {
               setHourlyValue(0.00000677);
               setExchangeRate(18.26);
-              setProfitDay(0);
-              setCostday(0);
-              setMinedday(0);
+              // setProfitDay(0);
+              // setCostday(0);
+              // setMinedday(0);
               setIsbtc(false);
               setIsetc(true);
               setIsxmr(false);
@@ -141,9 +141,9 @@ function App() {
               setIsltc(false);
               setIsDoge(false);
               setIsKadena(false);
-              setProfitDay(0);
-              setCostday(0);
-              setMinedday(0);
+              // setProfitDay(0);
+              // setCostday(0);
+              // setMinedday(0);
             }}
           >
             <img src="/xmr.png" alt="" width={30} />
@@ -163,9 +163,9 @@ function App() {
               setIsltc(false);
               setIsDoge(false);
               setIsKadena(false);
-              setProfitDay(0);
-              setCostday(0);
-              setMinedday(0);
+              // setProfitDay(0);
+              // setCostday(0);
+              // setMinedday(0);
             }}
           >
             <img src="/zec.png" alt="" width={30} />
@@ -185,9 +185,9 @@ function App() {
               setIsDoge(false);
               setIsltc(false);
               setIsKadena(false);
-              setProfitDay(0);
-              setCostday(0);
-              setMinedday(0);
+              // setProfitDay(0);
+              // setCostday(0);
+              // setMinedday(0);
             }}
           >
             <img src="/dash.png" alt="" width={30} />
@@ -207,9 +207,9 @@ function App() {
               setIsDoge(false);
               setIsKadena(false);
               setIsltc(true);
-              setProfitDay(0);
-              setCostday(0);
-              setMinedday(0);
+              // setProfitDay(0);
+              // setCostday(0);
+              // setMinedday(0);
             }}
           >
             <img src="/ltc.png" alt="" width={30} />
@@ -229,9 +229,9 @@ function App() {
               setIsltc(false);
               setIsKadena(false);
               setIsDoge(true);
-              setProfitDay(0);
-              setCostday(0);
-              setMinedday(0);
+              // setProfitDay(0);
+              // setCostday(0);
+              // setMinedday(0);
             }}
           >
             <img src="/doge.png" alt="" width={30} />
@@ -251,9 +251,9 @@ function App() {
               setIsltc(false);
               setIsDoge(false);
               setIsKadena(true);
-              setProfitDay(0);
-              setCostday(0);
-              setMinedday(0);
+              // setProfitDay(0);
+              // setCostday(0);
+              // setMinedday(0);
             }}
           >
             <img src="/kadena.png" alt="" width={30} />
