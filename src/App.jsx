@@ -55,18 +55,6 @@ function App() {
   profitmonth = profitday * 30;
   profityear = profitday * 365;
 
-  // useEffect(() => {
-  //   setPoolday((pool / 100) * profitday);
-  // }, [pool]);
-  // poolweek = poolday * 7;
-  // poolMonth = poolday * 30;
-  // poolYear = poolday * 365;
-
-  // profitday -= poolday;
-  // profitweek -= poolweek;
-  // profitmonth -= poolMonth;
-  // profityear -= poolYear;
-
   const [isbtc, setIsbtc] = useState(true);
   const [isEtc, setIsetc] = useState(false);
   const [isXmr, setIsxmr] = useState(false);
@@ -75,6 +63,73 @@ function App() {
   const [isLtc, setIsltc] = useState(false);
   const [isDoge, setIsDoge] = useState(false);
   const [isKadena, setIsKadena] = useState(false);
+
+  const styles = {
+    hoverbtc: {
+      backgroundImage:
+        isbtc && "linear-gradient(to right, #414141, rgb(0, 0, 0, 0.2))",
+
+      transform: isbtc && "scale(1.1)",
+      opacity: isbtc && 1,
+      borderRight: isbtc && "5px solid yellow",
+    },
+    hoveretc: {
+      backgroundImage:
+        isEtc && "linear-gradient(to right, #414141, rgb(0, 0, 0, 0.2))",
+
+      transform: isEtc && "scale(1.1)",
+      opacity: isEtc && 1,
+      borderRight: isEtc && "5px solid yellow",
+    },
+    hoverxmr: {
+      backgroundImage:
+        isXmr && "linear-gradient(to right, #414141, rgb(0, 0, 0, 0.2))",
+
+      transform: isXmr && "scale(1.1)",
+      opacity: isXmr && 1,
+      borderRight: isXmr && "5px solid yellow",
+    },
+    hoverz: {
+      backgroundImage:
+        isZec && "linear-gradient(to right, #414141, rgb(0, 0, 0, 0.2))",
+
+      transform: isZec && "scale(1.1)",
+      opacity: isZec && 1,
+      borderRight: isZec && "5px solid yellow",
+    },
+    hoverdash: {
+      backgroundImage:
+        isDash && "linear-gradient(to right, #414141, rgb(0, 0, 0, 0.2))",
+
+      transform: isDash && "scale(1.1)",
+      opacity: isDash && 1,
+      borderRight: isDash && "5px solid yellow",
+    },
+    hoverltc: {
+      backgroundImage:
+        isLtc && "linear-gradient(to right, #414141, rgb(0, 0, 0, 0.2))",
+
+      transform: isLtc && "scale(1.1)",
+      opacity: isLtc && 1,
+      borderRight: isLtc && "5px solid yellow",
+    },
+    hoverdoge: {
+      backgroundImage:
+        isDoge && "linear-gradient(to right, #414141, rgb(0, 0, 0, 0.2))",
+
+      transform: isDoge && "scale(1.1)",
+      opacity: isDoge && 1,
+      borderRight: isDoge && "5px solid yellow",
+    },
+    hoverkda: {
+      backgroundImage:
+        isKadena && "linear-gradient(to right, #414141, rgb(0, 0, 0, 0.2))",
+
+      transform: isKadena && "scale(1.1)",
+      opacity: isKadena && 1,
+      borderRight: isKadena && "5px solid yellow",
+    },
+  };
 
   return (
     <div className="App">
@@ -86,6 +141,7 @@ function App() {
         <div className="coins-container">
           <div
             className="coin"
+            style={styles.hoverbtc}
             onClick={() => {
               setIsbtc(true);
               setIsetc(false);
@@ -108,6 +164,7 @@ function App() {
 
           <div
             className="coin"
+            style={styles.hoveretc}
             onClick={() => {
               setHourlyValue(0.00000677);
               setExchangeRate(18.26);
@@ -130,6 +187,7 @@ function App() {
 
           <div
             className="coin"
+            style={styles.hoverxmr}
             onClick={() => {
               setExchangeRate(148.55);
               setHourlyValue(0.0000082);
@@ -152,6 +210,7 @@ function App() {
 
           <div
             className="coin"
+            style={styles.hoverz}
             onClick={() => {
               setExchangeRate(45.93);
               setHourlyValue(0.00001074);
@@ -174,6 +233,7 @@ function App() {
 
           <div
             className="coin"
+            style={styles.hoverdash}
             onClick={() => {
               setExchangeRate(46.79);
               setHourlyValue(0.00000002);
@@ -196,6 +256,7 @@ function App() {
 
           <div
             className="coin"
+            style={styles.hoverltc}
             onClick={() => {
               setExchangeRate(73.16);
               setHourlyValue(0.00000052);
@@ -218,6 +279,7 @@ function App() {
 
           <div
             className="coin"
+            style={styles.hoverdoge}
             onClick={() => {
               setExchangeRate(0.082);
               setHourlyValue(0.00076643);
@@ -240,6 +302,7 @@ function App() {
 
           <div
             className="coin"
+            style={styles.hoverkda}
             onClick={() => {
               setExchangeRate(0.997);
               setHourlyValue(0.0133675);
