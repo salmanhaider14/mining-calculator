@@ -136,7 +136,7 @@ body {
             #414141,
             rgb(0, 0, 0, 0.5)
           );
-          width: 55%;
+          width: 840px;
           height: 70px;
           color: lightgreen;
           padding: 1rem;
@@ -245,9 +245,17 @@ body {
         display: none;
       }
     }
+    .container {
+      .stats {
+        .day {
+          .profitmonth {
+            width: 250px;
+          }
+        }
+      }
+    }
   }
   .container {
-    width: 100vh;
     .stats {
       .calculator {
         flex-direction: column;
