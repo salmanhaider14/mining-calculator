@@ -3,7 +3,7 @@ import "./App.scss";
 
 function App() {
   let [hourlyvalue, setHourlyValue] = useState(0.00000015);
-  let [exchangerate, setExchangeRate] = useState(17, 457.05);
+  let [exchangerate, setExchangeRate] = useState(16670.97);
 
   const [hashingpower, setHashingpower] = useState(0);
 
@@ -76,250 +76,240 @@ function App() {
   const [isDoge, setIsDoge] = useState(false);
   const [isKadena, setIsKadena] = useState(false);
 
-  console.log(hourlyvalue);
-
   return (
     <div className="App">
       <div className="options">
-        <ul>
-          <li>
-            <button
-              onClick={() => {
-                setIsbtc(true);
-                setIsetc(false);
-                setIsxmr(false);
-                setIszec(false);
-                setIsDash(false);
-                setIsltc(false);
-                setIsDoge(false);
-                setIsKadena(false);
-                setHourlyValue(0.00000015);
-                setExchangeRate(17457.05);
-                setProfitDay(0);
-                setCostday(0);
-                setMinedday(0);
-              }}
-            >
-              BTC{" "}
-            </button>
-          </li>
-          <li>
-            <button
-              onClick={() => {
-                setHourlyValue(0.00000677);
-                setExchangeRate(18.26);
-                setProfitDay(0);
-                setCostday(0);
-                setMinedday(0);
-                setIsbtc(false);
-                setIsetc(true);
-                setIsxmr(false);
-                setIszec(false);
-                setIsDash(false);
-                setIsltc(false);
-                setIsDoge(false);
-                setIsKadena(false);
-              }}
-            >
-              ETC{" "}
-            </button>
-          </li>
-          <li>
-            <button
-              onClick={() => {
-                setExchangeRate(148.55);
-                setHourlyValue(0.0000082);
-                setIsbtc(false);
-                setIsetc(false);
-                setIsxmr(true);
-                setIszec(false);
-                setIsDash(false);
-                setIsltc(false);
-                setIsDoge(false);
-                setIsKadena(false);
-                setProfitDay(0);
-                setCostday(0);
-                setMinedday(0);
-              }}
-            >
-              XMR{" "}
-            </button>
-          </li>
-          <li>
-            <button
-              onClick={() => {
-                setExchangeRate(45.93);
-                setHourlyValue(0.00001074);
-                setIsbtc(false);
-                setIsetc(false);
-                setIsxmr(false);
-                setIszec(true);
-                setIsDash(false);
-                setIsltc(false);
-                setIsDoge(false);
-                setIsKadena(false);
-                setProfitDay(0);
-                setCostday(0);
-                setMinedday(0);
-              }}
-            >
-              ZEC
-            </button>
-          </li>
-          <li>
-            <button
-              onClick={() => {
-                setExchangeRate(46.79);
-                setHourlyValue(0.00000002);
-                setIsbtc(false);
-                setIsetc(false);
-                setIsxmr(false);
-                setIszec(false);
-                setIsDash(true);
-                setIsDoge(false);
-                setIsltc(false);
-                setIsKadena(false);
-                setProfitDay(0);
-                setCostday(0);
-                setMinedday(0);
-              }}
-            >
-              Dash
-            </button>
-          </li>
-          <li>
-            <button
-              onClick={() => {
-                setExchangeRate(73.16);
-                setHourlyValue(0.00000052);
-                setIsbtc(false);
-                setIsetc(false);
-                setIsxmr(false);
-                setIszec(false);
-                setIsDash(false);
-                setIsDoge(false);
-                setIsKadena(false);
-                setIsltc(true);
-                setProfitDay(0);
-                setCostday(0);
-                setMinedday(0);
-              }}
-            >
-              LTC
-            </button>
-          </li>
-          <li>
-            <button
-              onClick={() => {
-                setExchangeRate(0.082);
-                setHourlyValue(0.00076643);
-                setIsbtc(false);
-                setIsetc(false);
-                setIsxmr(false);
-                setIszec(false);
-                setIsDash(false);
-                setIsltc(false);
-                setIsKadena(false);
-                setIsDoge(true);
-                setProfitDay(0);
-                setCostday(0);
-                setMinedday(0);
-              }}
-            >
-              DOGE
-            </button>
-          </li>
-          <li>
-            <button
-              onClick={() => {
-                setExchangeRate(0.997);
-                setHourlyValue(0.0133675);
-                setIsbtc(false);
-                setIsetc(false);
-                setIsxmr(false);
-                setIszec(false);
-                setIsDash(false);
-                setIsltc(false);
-                setIsDoge(false);
-                setIsKadena(true);
-                setProfitDay(0);
-                setCostday(0);
-                setMinedday(0);
-              }}
-            >
-              Kadena
-            </button>
-          </li>
-        </ul>
+        <a href="https://minershub.ae">
+          <img src="/logo.png" alt="" className="logo" />
+        </a>
+
+        <div className="coins-container">
+          <div
+            className="coin"
+            onClick={() => {
+              setIsbtc(true);
+              setIsetc(false);
+              setIsxmr(false);
+              setIszec(false);
+              setIsDash(false);
+              setIsltc(false);
+              setIsDoge(false);
+              setIsKadena(false);
+              setHourlyValue(0.00000015);
+              setExchangeRate(16670.97);
+              setProfitDay(0);
+              setCostday(0);
+              setMinedday(0);
+            }}
+          >
+            <img src="/btc.png" alt="" width={30} />
+            <p>Bitcoin</p>
+          </div>
+
+          <div
+            className="coin"
+            onClick={() => {
+              setHourlyValue(0.00000677);
+              setExchangeRate(18.26);
+              setProfitDay(0);
+              setCostday(0);
+              setMinedday(0);
+              setIsbtc(false);
+              setIsetc(true);
+              setIsxmr(false);
+              setIszec(false);
+              setIsDash(false);
+              setIsltc(false);
+              setIsDoge(false);
+              setIsKadena(false);
+            }}
+          >
+            <img src="/etc.png" alt="" width={30} />
+            <p> Etherium</p>
+          </div>
+
+          <div
+            className="coin"
+            onClick={() => {
+              setExchangeRate(148.55);
+              setHourlyValue(0.0000082);
+              setIsbtc(false);
+              setIsetc(false);
+              setIsxmr(true);
+              setIszec(false);
+              setIsDash(false);
+              setIsltc(false);
+              setIsDoge(false);
+              setIsKadena(false);
+              setProfitDay(0);
+              setCostday(0);
+              setMinedday(0);
+            }}
+          >
+            <img src="/xmr.png" alt="" width={30} />
+            <p>Monero </p>
+          </div>
+
+          <div
+            className="coin"
+            onClick={() => {
+              setExchangeRate(45.93);
+              setHourlyValue(0.00001074);
+              setIsbtc(false);
+              setIsetc(false);
+              setIsxmr(false);
+              setIszec(true);
+              setIsDash(false);
+              setIsltc(false);
+              setIsDoge(false);
+              setIsKadena(false);
+              setProfitDay(0);
+              setCostday(0);
+              setMinedday(0);
+            }}
+          >
+            <img src="/zec.png" alt="" width={30} />
+            <p>Zcash </p>
+          </div>
+
+          <div
+            className="coin"
+            onClick={() => {
+              setExchangeRate(46.79);
+              setHourlyValue(0.00000002);
+              setIsbtc(false);
+              setIsetc(false);
+              setIsxmr(false);
+              setIszec(false);
+              setIsDash(true);
+              setIsDoge(false);
+              setIsltc(false);
+              setIsKadena(false);
+              setProfitDay(0);
+              setCostday(0);
+              setMinedday(0);
+            }}
+          >
+            <img src="/dash.png" alt="" width={30} />
+            <p>Dash</p>
+          </div>
+
+          <div
+            className="coin"
+            onClick={() => {
+              setExchangeRate(73.16);
+              setHourlyValue(0.00000052);
+              setIsbtc(false);
+              setIsetc(false);
+              setIsxmr(false);
+              setIszec(false);
+              setIsDash(false);
+              setIsDoge(false);
+              setIsKadena(false);
+              setIsltc(true);
+              setProfitDay(0);
+              setCostday(0);
+              setMinedday(0);
+            }}
+          >
+            <img src="/ltc.png" alt="" width={30} />
+            <p> Litecoin </p>
+          </div>
+
+          <div
+            className="coin"
+            onClick={() => {
+              setExchangeRate(0.082);
+              setHourlyValue(0.00076643);
+              setIsbtc(false);
+              setIsetc(false);
+              setIsxmr(false);
+              setIszec(false);
+              setIsDash(false);
+              setIsltc(false);
+              setIsKadena(false);
+              setIsDoge(true);
+              setProfitDay(0);
+              setCostday(0);
+              setMinedday(0);
+            }}
+          >
+            <img src="/doge.png" alt="" width={30} />
+            <p>DOGE</p>
+          </div>
+
+          <div
+            className="coin"
+            onClick={() => {
+              setExchangeRate(0.997);
+              setHourlyValue(0.0133675);
+              setIsbtc(false);
+              setIsetc(false);
+              setIsxmr(false);
+              setIszec(false);
+              setIsDash(false);
+              setIsltc(false);
+              setIsDoge(false);
+              setIsKadena(true);
+              setProfitDay(0);
+              setCostday(0);
+              setMinedday(0);
+            }}
+          >
+            <img src="/kadena.png" alt="" width={30} />
+            <p>Kadena</p>
+          </div>
+        </div>
       </div>
 
       <div className="container">
-        <div className="calculator">
-          <img
-            src={
-              (isbtc && "/btc.png") ||
-              (isEtc && "/etc.png") ||
-              (isXmr && "/xmr.png") ||
-              (isZec && "/zec.png") ||
-              (isDash && "/dash.png") ||
-              (isLtc && "/ltc.png") ||
-              (isDoge && "/doge.png") ||
-              (isKadena && "/kadena.png")
-            }
-            alt=""
-            width={80}
-          />
-          <p className="rate">
-            {(isbtc && "1 BTC = 17457.05$") ||
-              (isEtc && "1 ETC = 18.26$") ||
-              (isXmr && "1 XMR = 148.55$") ||
-              (isZec && "1 ZEC = 45.93$") ||
-              (isDash && "1 Dash = 46.79$") ||
-              (isLtc && "1 LTC = 73.16$") ||
-              (isDoge && "1 DOGE = 0.082$") ||
-              (isKadena && "1 KDA = 0.997$ ")}
-          </p>
-          <label>Hashing Power</label>
-          <input
-            type={"text"}
-            placeholder={
-              (isbtc && "0 Th/s") ||
-              (isEtc && "0 Mh/s") ||
-              (isXmr && "0 Kh/s") ||
-              (isZec && "0 Kh/s") ||
-              (isDash && "0 Mh/s") ||
-              (isLtc && "0 Mh/s") ||
-              (isDoge && "0 Mh/s") ||
-              (isKadena && "0 Th/s")
-            }
-            onChange={(e) => {
-              setHashingpower(e.target.value);
-            }}
-          />
-
-          <label>Power consumption (w)</label>
-          <input
-            type={"text"}
-            placeholder="0"
-            onChange={(e) => setPower(e.target.value)}
-          />
-
-          <label>Cost per KWh ($)</label>
-          <input
-            type={"text"}
-            placeholder="0"
-            onChange={(e) => setHorsepower(e.target.value)}
-          />
-
-          {/* <label>Pool Fee (%)</label>
-          <input
-            type={"text"}
-            placeholder="0"
-            onChange={(e) => setPool(e.target.value)}
-          /> */}
-        </div>
-
         <div className="stats">
+          <div className="calculator">
+            <div
+              style={{ display: "flex", flexDirection: "column", gap: "10px" }}
+            >
+              <label>Hashing Power</label>
+              <input
+                type={"text"}
+                placeholder={
+                  (isbtc && "0 Th/s") ||
+                  (isEtc && "0 Mh/s") ||
+                  (isXmr && "0 Kh/s") ||
+                  (isZec && "0 Kh/s") ||
+                  (isDash && "0 Mh/s") ||
+                  (isLtc && "0 Mh/s") ||
+                  (isDoge && "0 Mh/s") ||
+                  (isKadena && "0 Th/s")
+                }
+                onChange={(e) => {
+                  setHashingpower(e.target.value);
+                }}
+              />
+            </div>
+
+            <div
+              style={{ display: "flex", flexDirection: "column", gap: "10px" }}
+            >
+              {" "}
+              <label>Power consumption (w)</label>
+              <input
+                type={"text"}
+                placeholder="0"
+                onChange={(e) => setPower(e.target.value)}
+              />
+            </div>
+
+            <div
+              style={{ display: "flex", flexDirection: "column", gap: "10px" }}
+            >
+              <label>Cost per KWh ($)</label>
+              <input
+                type={"text"}
+                placeholder="0"
+                onChange={(e) => setHorsepower(e.target.value)}
+              />
+            </div>
+          </div>
           <div className="day">
             <div className="profitmonth">
               <p>Profit per month</p>
@@ -328,25 +318,15 @@ function App() {
           </div>
 
           <div className="day">
-            {profitday > costday ? (
-              <div className="profit" style={{ backgroundColor: "green" }}>
+            {profitday < costday ? (
+              <div className="profit" style={{ color: "red" }}>
                 <p>Profit per day</p>
                 <h2>${profitday.toFixed(4)}</h2>
-                {/* <p style={{ fontSize: "14px" }}>
-                  Pool Fee $ {poolday.toFixed(4)}
-                </p> */}
-
-                <h3>Day</h3>
               </div>
             ) : (
               <div className="profit">
                 <p>Profit per day</p>
                 <h2>${profitday.toFixed(4)}</h2>
-                {/* <p style={{ fontSize: "14px" }}>
-                  Pool Fee $ {poolday.toFixed(4)}
-                </p> */}
-
-                <h3>Day</h3>
               </div>
             )}
             <div className="mined">
@@ -370,23 +350,15 @@ function App() {
             </div>
           </div>
           <div className="day">
-            {profitday > costday ? (
-              <div className="profit" style={{ backgroundColor: "green" }}>
+            {profitday < costday ? (
+              <div className="profit" style={{ color: "red" }}>
                 <p>Profit per week</p>
                 <h2>${profitweek.toFixed(4)}</h2>
-                {/* <p style={{ fontSize: "14px" }}>
-                  Pool Fee $ {poolweek.toFixed(4)}
-                </p> */}
-                <h3>Week</h3>
               </div>
             ) : (
               <div className="profit">
                 <p>Profit per week</p>
                 <h2>${profitweek.toFixed(4)}</h2>
-                {/* <p style={{ fontSize: "14px" }}>
-                  Pool Fee $ {poolweek.toFixed(4)}
-                </p> */}
-                <h3>Week</h3>
               </div>
             )}
             <div className="mined">
@@ -410,23 +382,15 @@ function App() {
             </div>
           </div>
           <div className="day">
-            {profitday > costday ? (
-              <div className="profit" style={{ backgroundColor: "green" }}>
+            {profitday < costday ? (
+              <div className="profit" style={{ color: "red" }}>
                 <p>Profit per month</p>
                 <h2>${profitmonth.toFixed(4)}</h2>
-                {/* <p style={{ fontSize: "14px" }}>
-                  Pool Fee $ {poolMonth.toFixed(4)}
-                </p> */}
-                <h3>Month</h3>
               </div>
             ) : (
               <div className="profit">
                 <p>Profit per month</p>
                 <h2>${profitmonth.toFixed(4)}</h2>
-                {/* <p style={{ fontSize: "14px" }}>
-                  Pool Fee $ {poolMonth.toFixed(4)}
-                </p> */}
-                <h3>Month</h3>
               </div>
             )}
             <div className="mined">
@@ -450,23 +414,15 @@ function App() {
             </div>
           </div>
           <div className="day">
-            {profitday > costday ? (
-              <div className="profit" style={{ backgroundColor: "green" }}>
+            {profitday < costday ? (
+              <div className="profit" style={{ color: "red" }}>
                 <p>Profit per year</p>
                 <h2>${profityear.toFixed(4)}</h2>
-                {/* <p style={{ fontSize: "14px" }}>
-                  Pool Fee $ {poolYear.toFixed(4)}
-                </p> */}
-                <h3>Year</h3>
               </div>
             ) : (
               <div className="profit">
                 <p>Profit per year</p>
                 <h2>${profityear.toFixed(4)}</h2>
-                {/* <p style={{ fontSize: "14px" }}>
-                  Pool Fee $ {poolYear.toFixed(4)}
-                </p> */}
-                <h3>Year</h3>
               </div>
             )}
             <div className="mined">
