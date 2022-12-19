@@ -34,14 +34,17 @@ body {
       padding: 1rem;
       line-height: 10px;
       margin-top: 10rem;
+      margin-left: 1rem;
+      gap: 20px;
       .coin {
         color: white;
         border: none;
-        padding: 13px;
-        border-radius: 5px;
+        padding: 5px;
+        border-radius: 10px;
         display: flex;
         gap: 20px;
         width: 250px;
+        height: max-content;
         font-size: 18px;
         cursor: pointer;
         opacity: 0.7;
@@ -58,6 +61,7 @@ body {
           );
           transform: scale(1.1);
           opacity: 1;
+          border-right: 5px solid yellow;
         }
       }
     }
@@ -88,12 +92,13 @@ body {
 
       .calculator {
         display: flex;
-        gap: 3rem;
+        gap: 1rem;
         padding: 1rem;
         flex-wrap: wrap;
-        justify-content: center;
+        justify-content: space-around;
         align-items: center;
         margin-bottom: 1rem;
+        width: 65%;
 
         label {
           font-size: 16px;
@@ -130,7 +135,7 @@ body {
             #414141,
             rgb(0, 0, 0, 0.5)
           );
-          width: 50%;
+          width: 55%;
           height: 70px;
           color: lightgreen;
           padding: 1rem;
@@ -151,7 +156,7 @@ body {
           background-image: linear-gradient(
             to right,
             #414141,
-            rgb(0, 0, 0, 0.9)
+            rgb(0, 0, 0, 0.5)
           );
           width: 250px;
           height: max-content;
@@ -182,7 +187,7 @@ body {
           background-image: linear-gradient(
             to right,
             #414141,
-            rgb(0, 0, 0, 0.7)
+            rgb(0, 0, 0, 0.5)
           );
           width: 250px;
           height: max-content;
@@ -202,7 +207,7 @@ body {
           background-image: linear-gradient(
             to right,
             #414141,
-            rgb(0, 0, 0, 0.7)
+            rgb(0, 0, 0, 0.5)
           );
           width: 250px;
           height: max-content;
@@ -244,6 +249,7 @@ body {
     .stats {
       .calculator {
         flex-direction: column;
+        display: flex;
       }
       .day {
         flex-direction: column;

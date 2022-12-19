@@ -319,7 +319,7 @@ function App() {
 
           <div className="day">
             {profitday < costday ? (
-              <div className="profit" style={{ color: "red" }}>
+              <div className="profit" style={{ color: "#DC3535" }}>
                 <p>Profit per day</p>
                 <h2>${profitday.toFixed(4)}</h2>
               </div>
@@ -351,7 +351,7 @@ function App() {
           </div>
           <div className="day">
             {profitday < costday ? (
-              <div className="profit" style={{ color: "red" }}>
+              <div className="profit" style={{ color: "#DC3535" }}>
                 <p>Profit per week</p>
                 <h2>${profitweek.toFixed(4)}</h2>
               </div>
@@ -383,7 +383,7 @@ function App() {
           </div>
           <div className="day">
             {profitday < costday ? (
-              <div className="profit" style={{ color: "red" }}>
+              <div className="profit" style={{ color: "#DC3535" }}>
                 <p>Profit per month</p>
                 <h2>${profitmonth.toFixed(4)}</h2>
               </div>
@@ -415,7 +415,7 @@ function App() {
           </div>
           <div className="day">
             {profitday < costday ? (
-              <div className="profit" style={{ color: "red" }}>
+              <div className="profit" style={{ color: "#DC3535" }}>
                 <p>Profit per year</p>
                 <h2>${profityear.toFixed(4)}</h2>
               </div>
