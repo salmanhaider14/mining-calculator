@@ -329,7 +329,12 @@ function App() {
         <div className="stats">
           <div className="calculator">
             <div
-              style={{ display: "flex", flexDirection: "column", gap: "10px" }}
+              style={{
+                display: "flex",
+                flexDirection: "column",
+                gap: "10px",
+                marginRight: "6rem",
+              }}
             >
               <label>Hashing Power</label>
               <input
@@ -351,7 +356,12 @@ function App() {
             </div>
 
             <div
-              style={{ display: "flex", flexDirection: "column", gap: "10px" }}
+              style={{
+                display: "flex",
+                flexDirection: "column",
+                gap: "10px",
+                marginRight: "6rem",
+              }}
             >
               {" "}
               <label>Power consumption (w)</label>
@@ -363,7 +373,12 @@ function App() {
             </div>
 
             <div
-              style={{ display: "flex", flexDirection: "column", gap: "10px" }}
+              style={{
+                display: "flex",
+                flexDirection: "column",
+                gap: "10px",
+                marginRight: "6rem",
+              }}
             >
               <label>Cost per KWh ($)</label>
               <input
