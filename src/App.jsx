@@ -333,7 +333,6 @@ function App() {
                 display: "flex",
                 flexDirection: "column",
                 gap: "10px",
-                marginRight: "6rem",
               }}
             >
               <label>Hashing Power</label>
@@ -360,7 +359,6 @@ function App() {
                 display: "flex",
                 flexDirection: "column",
                 gap: "10px",
-                marginRight: "6rem",
               }}
             >
               {" "}
@@ -377,7 +375,6 @@ function App() {
                 display: "flex",
                 flexDirection: "column",
                 gap: "10px",
-                marginRight: "6rem",
               }}
             >
               <label>Cost per KWh ($)</label>
