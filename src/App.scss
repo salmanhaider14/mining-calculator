@@ -19,6 +19,13 @@ body {
       object-fit: contain;
       position: fixed;
       left: 0;
+      display: none;
+    }
+    .logopc {
+      width: 250px;
+      object-fit: contain;
+      position: fixed;
+      left: 0;
     }
 
     .hamburger {
@@ -242,6 +249,10 @@ body {
 
       .logo {
         width: 70px;
+        display: flex;
+      }
+      .logopc {
+        display: none;
       }
       p {
         display: none;

@@ -137,6 +137,9 @@ function App() {
         <a href="https://minershub.ae">
           <img src="/logo.png" alt="" className="logo" />
         </a>
+        <a href="https://minershub.ae">
+          <img src="/logopc.png" alt="" className="logopc" />
+        </a>
 
         <div className="coins-container">
           <div
